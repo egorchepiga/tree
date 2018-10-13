@@ -56,7 +56,7 @@ func createTree(path string, flag bool) ([]fsItem, error) {
 		}
 		if len(items[i-1].path) > pathLen {
 			newLast := map[int]bool{pathLen: true}
-			for j := 0; j < len(items[i-1].path)-1; j++ {
+			for j := 0; j < pathLen; j++ {
 				newLast[j] = last[j]
 			}
 			last = newLast
