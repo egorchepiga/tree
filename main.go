@@ -13,6 +13,7 @@ type fsItem struct {
 	name string
 	path []string
 	last bool
+	dir bool
 	size uint
 }
 
@@ -36,7 +37,7 @@ func createTree(path string, flag bool) ([]fsItem, error) {
 	err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 		item := strings.Split(path, "/")
 		if flag || info.IsDir() {
-			items = append(items, fsItem{item[len(item)-1], item, false, uint(info.Size())})
+			items = append(items, fsItem{item[len(item)-1], item, false, info.IsDir(),uint(info.Size())})
 		}
 		return nil
 	})
@@ -91,7 +92,7 @@ func printTree(items []fsItem, flag bool) (string, error) {
 			size = strconv.Itoa(int(items[i].size)) + "b"
 		}
 
-		if flag {
+		if flag && !items[i].dir {
 			result += fmt.Sprintf("%s%s%v  (%s) \n", indent, pref, items[i].name, size)
 		} else {
 			result += fmt.Sprintf("%s%s%v \n", indent, pref, items[i].name)
