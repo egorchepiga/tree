@@ -4,33 +4,33 @@
 ```
 go run main.go testdata -f
 └───testdata
-   	├───project  (4096b)
+   	├───project
    	│	├───file.txt  (19b)
    	│	└───gopher.png  (70372b)
-   	├───static  (4096b)
-   	│	├───a_lorem  (4096b)
+   	├───static
+   	│	├───a_lorem
    	│	│	├───dolor.txt  (empty)
    	│	│	├───gopher.png  (70372b)
-   	│	│	└───ipsum  (4096b)
+   	│	│	└───ipsum
    	│	│	   	└───gopher.png  (70372b)
-   	│	├───css  (4096b)
+   	│	├───css
    	│	│	└───body.css  (28b)
    	│	├───empty.txt  (empty)
-   	│	├───html  (4096b)
+   	│	├───html
    	│	│	└───index.html  (57b)
-   	│	├───js  (4096b)
+   	│	├───js
    	│	│	└───site.js  (10b)
-   	│	├───z_lorem  (4096b)
+   	│	├───z_lorem
    	│	│	├───dolor.txt  (empty)
    	│	│	├───gopher.png  (70372b)
-   	│	│	└───ipsum  (4096b)
+   	│	│	└───ipsum
    	│	│	   	└───gopher.png  (70372b)
-   	├───zline  (4096b)
+   	├───zline
    	│	├───empty.txt  (empty)
-   	│	└───lorem  (4096b)
+   	│	└───lorem
    	│	   	├───dolor.txt  (empty)
    	│	   	├───gopher.png  (70372b)
-   	│	   	└───ipsum  (4096b)
+   	│	   	└───ipsum
    	│	   	   	└───gopher.png  (70372b)
    	└───zzfile.txt  (empty)
 ```
